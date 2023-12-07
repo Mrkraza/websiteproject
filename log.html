@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Signup Form</title>
+  <style>
+    .loh{
+        color: #007bff;
+
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: black;
+      color: #fff;
+      padding: 10px 20px 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 34%;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .switch-form {
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    .switch-form a {
+      text-decoration: none;
+      color: #007bff;
+      cursor: pointer;
+    }
+
+    .switch-form a:hover {
+      text-decoration: underline;
+    }
+    .sign{
+        color: red;
+
+    }
+  </style>
+</head>
+<body>
+  <form id="loginForm">
+    <h2 id="loh">Sign Up</h2>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" placeholder="Email" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Password" required>
+    <label for="password">Confirm Password:</label>
+    <input type="password" id="password" name="password" placeholder="Re-Enter Password" required>
+
+    <button type="submit">Sign Up</button>
+
+    <div class="switch-form">
+      Already have an account? <a href="#" onclick="toggleForm('signupForm')">Log in</a>
+    </div>
+    <div class="switch-form">
+      <a href="index.html">Home</a>
+      </div>
+  </form>
+
+  <form id="signupForm" style="display: none;">
+    <h2>Log in</h2>
+    <label for="newUsername">Username:</label>
+    <input type="text" id="newUsername" name="newUsername" placeholder="Email" required>
+
+    <label for="newPassword">Password:</label>
+    <input type="password" id="newPassword" placeholder="Password" name="newPassword" required>
+
+    <button type="submit" id="sign">Log in</button>
+
+    <div class="switch-form">
+      Don't have an account? <a href="#" onclick="toggleForm('loginForm')">Sign up</a>
+    </div>
+    <div class="switch-form">
+    <a href="index.html">Home</a>
+    </div>
+  </form>
+
+  <script>
+    function toggleForm(formId) {
+      const loginForm = document.getElementById('loginForm');
+      const signupForm = document.getElementById('signupForm');
+
+      if (formId === 'loginForm') {
+        loginForm.style.display = 'block';
+        signupForm.style.display = 'none';
+      } else {
+        loginForm.style.display = 'none';
+        signupForm.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>

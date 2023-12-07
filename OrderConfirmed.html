@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed and Track Order</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: auto;
+        }
+        .heading {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .confirmation {
+            margin-bottom: 30px;
+        }
+        .order-summary {
+            width: 45%;
+            float: left;
+            margin-right: 10%;
+        }
+        .tracking-summary {
+            width: 45%;
+            float: left;
+        }
+        .tracking-number {
+            margin-bottom: 10px;
+        }
+        .tracking-details {
+            margin-bottom: 15px;
+        }
+        .status {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .update-btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .update-btn:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>Order Confirmed</h1>
+        </div>
+        <div class="confirmation">
+            <p>Your order has been confirmed and will be shipped soon. You can track your order below:</p>
+        </div>
+        <div class="clearfix">
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <p>Order ID: <span>123456</span></p>
+                <p>Order Date: <span>12/12/2021</span></p>
+                <p>Total: <span>$99.99</span></p>
+            </div>
+            <div class="tracking-summary">
+                <h2>Tracking Details</h2>
+                <div class="tracking-number">
+                    <p>Tracking Number: <span>9876543210</span></p>
+                </div>
+                <div class="tracking-details">
+                    <p class="status">Status: <span>In Transit</span></p>
+                    <p>Last Updated: <span>12/12/2021 1:30 PM</span></p>
+                </div>
+                <a href="#" class="update-btn">Update</a>
+        <a href="index.html" style="text-decoration: none;">Home</a>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
